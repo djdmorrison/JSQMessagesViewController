@@ -88,7 +88,7 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
     JSQMessagesBubbleImageFactory *bubbleImageFactory = [[JSQMessagesBubbleImageFactory alloc] init];
     
     if (shouldDisplayOnLeft) {
-        self.bubbleImageView.image = [bubbleImageFactory incomingMessagesBubbleImageWithColor:messageBubbleColor].messageBubbleImage;
+        self.bubbleImageView.image = [bubbleImageFactory incomingMessagesBubbleImageWithColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]].messageBubbleImage;
         
         CGFloat collectionViewWidth = CGRectGetWidth(collectionView.frame);
         CGFloat bubbleWidth = CGRectGetWidth(self.bubbleImageView.frame);
@@ -101,7 +101,7 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
         self.typingIndicatorImageViewRightHorizontalConstraint.constant = indicatorMarginMaximumSpacing;
     }
     else {
-        self.bubbleImageView.image = [bubbleImageFactory outgoingMessagesBubbleImageWithColor:messageBubbleColor].messageBubbleImage;
+        self.bubbleImageView.image = [bubbleImageFactory outgoingMessagesBubbleImageWithColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]].messageBubbleImage;
         
         self.bubbleImageViewRightHorizontalConstraint.constant = bubbleMarginMinimumSpacing;
         self.typingIndicatorImageViewRightHorizontalConstraint.constant = indicatorMarginMinimumSpacing;
@@ -109,7 +109,7 @@ const CGFloat kJSQMessagesTypingIndicatorFooterViewHeight = 46.0f;
     
     [self setNeedsUpdateConstraints];
     
-    self.typingIndicatorImageView.image = [[UIImage jsq_defaultTypingIndicatorImage] jsq_imageMaskedWithColor:ellipsisColor];
+    self.typingIndicatorImageView.image = [[UIImage jsq_defaultTypingIndicatorImage] jsq_imageMaskedWithColor:[UIColor colorWithRed:0.31 green:0.82 blue:0.76 alpha:1.0]];
 }
 
 @end
